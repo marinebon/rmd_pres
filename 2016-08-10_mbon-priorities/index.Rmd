@@ -1,7 +1,7 @@
 ---
-title: "2016-07-28_MBON-in-Box"
+title: "MBON Priorities"
 author: "Ben Best"
-date: "July 28, 2016 (bit.ly/mbon_07-28-16)"
+date: "marinebon.github.io/rmd_pres/2016-08-10_mbon-priorities"
 output: 
   ioslides_presentation: 
     fig_caption: yes
