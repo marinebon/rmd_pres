@@ -1,0 +1,265 @@
+---
+title: "2016-07-28_MBON-in-Box"
+author: "Ben Best"
+date: "July 28, 2016 (bit.ly/mbon_07-28-16)"
+output: 
+  ioslides_presentation: 
+    fig_caption: yes
+    incremental: yes
+    logo: img/mbon_logo.png
+    self_contained: no
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(htmltools)
+```
+
+# Overview
+
+<!--
+TODO:
+- bit.ly/mbon_07-28-16
+- iframe sdss apps
+- how to link to slide anchor? (besides #13)
+- swap out logo
+-->
+
+## Outline
+
+Choose your own adventure...
+
+- Background
+
+- Research
+
+- [Tools](./#sdm)
+
+## Background <!--  -->
+
+- **OBIS-SEAMAP**: marine mammal, seabird, sea turtle geo-portal of observations
+
+- **MGET**: ArcGIS tools for ecological data & analysis (Python, R, Matlab, C++)
+
+- **SDM**: species distribution models for marine mammals in BC, US Atlantic
+
+- **OHI**: 10 goals to describe sustainable ocean benefits to humans
+
+- **SDSS**: spatial decision support systems to sync map, tradeoff plot and table for _siting_ offshore wind and _routing_ around whale strike risk <!-- TODO: embed iframes of apps -->
+
+## Research {.smaller}
+
+ <!-- questions (can we do this?) -->
+
+How can we translate these into operational MBON products? 
+
+- **What proportion of species range is covered by observations?**
+
+    Can we describe the gaps, "darkspots", in observations (OBIS) compared to the expert-derived species ranges (IUCN), to inform strategic future monitoring, particularly for species with high extinction risk?
+
+- **What is the status of structure-forming habitats along coast?**
+
+    Can we estimate the condition & extent of coastal habitats annually & globally using RS, particularly Google Earth Engine and deep learning techniques like convolutional neural networks?
+    
+    <!-- OHI: habitats, coastal protection, carbon storage -->
+    
+- **Can we describe place-based ecosystem health/resilience based on measures of species abundance and known food webs**?
+
+    EcoSim style food webs.
+    
+    Eddy et al. (2016) [Ecosystem effects of invertebrate fisheries](http://onlinelibrary.wiley.com/doi/10.1111/faf.12165/abstract) _Fish & Fisheries_ ([press](http://conservationmagazine.org/2016/07/ripple-effects-shellfish-fisheries/))
+
+
+    <!-- see [The ripple effects of shellfish fisheries - Conservation](http://conservationmagazine.org/2016/07/ripple-effects-shellfish-fisheries/) -->
+
+## Tools
+
+- What is BON in a Box?
+
+  - [video, website]
+  
+  - SOP (FC) vs tools vs portal kit vs communication system (forum, data sharing)
+
+- Github project management across MBONs: <http://github.com/marinebon>
+
+- "Geo-enrichment" web services <!-- any spatial input, attributes output -->
+
+    - complement to existing APIs (OBIS), THREDDS/ERDDAP servers
+    
+    - client functions in packages (R, Python, Matlab, ArcGIS)
+    
+    - connects from simple web portal
+    
+- Packages (bundles of functions)
+  
+    - software: R, Python, Matlab, ArcGIS
+    
+    - plots (time-series), maps (with backgrounds, hexagons), venn diagrams, ordination (eDNA, seascapes) <!-- more detail here from Monterey notes -->
+    
+    - clients to access data repo APIs: robis, rerddap (see ROpenSci for more: dryad, figshare, DataOne)
+    
+        - page of datasets by endpoint & client (generated from directory of JSON files, or csv table to describe)
+    
+    - vignettes with use case scenarios / examples
+    
+    - unit tests
+    
+- Manual
+
+    - SOP
+    
+    - more like BON in box
+    
+    - communally edited via Github (even w/ just browser)
+
+- Portal Kit
+
+    - data -> summary, tables, plots, maps -> interactive app
+    
+    - continuous integration
+
+- Dynamic Reports
+  
+    - dynamic documents using Rmarkdown
+    
+    - quick: closes gap from data ingestion, analysis, visualization and sharing (no bottlenecks)
+
+- Training Workshops
+
+    - When? 1) August in Monterey?, 2) all hands annual mtg Jan/Feb 2017
+
+    - reproducible research: versioning code & communicating via issues on Github
+    
+    - dynamic reports (Rmarkdown)
+    
+    - GUIs for desktop & web (shiny)
+    
+    - functions in packages
+
+## Dynamic Documents {.smaller}
+
+- live connection to data
+- [**Rmarkdown**](http://rmarkdown.rstudio.com/): R + markdown -> html, docx, pdf
+
+    `r img(src='img/RMarkdownOutputFormats.png', width=300)`
+
+- [rmarkdown-example](https://github.com/bbest/rmarkdown-example): plus references with Zotero
+
+    
+<div class="notes">
+many formats:
+- **pdf**: pretty, professional, portable
+- **docx**: use track changes with collaborators
+- **html**: web
+</div>
+
+# Background
+
+## OBIS-SEAMAP
+
+- portal img
+
+## MGET
+
+- [link to expandable tree]
+
+## SDM
+
+- [link to MGEL press release]
+
+
+## Needs
+
+- Compile disperate data sources
+    - OBIS, AquaMaps, IUCN
+
+# Background: OBIS-SEAMAP
+
+Ocean Biogeographic Information System - Spatial Ecological Analysis of Megavertebrate Animal Populations
+
+# Background: MGET
+
+Marine Geospatial Ecology Tools
+
+# Background: OHI
+
+Ocean Health Index
+
+## pie
+
+## cumulative human impacts (esri)
+    
+## Biodiversity in OHI
+
+Species index based on conservation, extinction risk
+
+
+## Biodiversity: Habitats
+Existence values people hold for biodiversity measured through the status of key habitats
+
+$$
+x_{HAB} =  \sum_{i=1}^{k} \frac{C_{c,k}}{C_{r,k}} * \frac{A_{c,k}}{A_{T}}
+$$
+
+- $C$ = condition of habitat k, current [$c$] or reference[$r$]
+
+- $A$ = area of habitat k, current [$c$] or total of all habitats [T]
+
+habitats: seagrass beds, salt marshes, subtidal soft-bottom habitats, mangroves, coral reefs, sea ice edge
+
+
+## Biodiversity: Species
+Existence values people hold for biodiversity measured through the status of native species
+
+$$
+x_{SPP} = \frac{\sum_{k=1}^{M} (\frac{\sum_{i=1}^{N} w_{i}}{N}) * A_{C}}{A_{T}} 
+$$
+
+- $M$ = number of grid cells in the assessment region
+
+- $N$ = number species in a grid cell $c$
+
+- $A$ = total area of a grid cell [$c$] the assessment region [T]
+
+- $w_{i}$ = status weight assigned per threat 
+
+assessed species list and maps: IUCN
+
+<!-- TODO: image of range map over grid extracted -->
+
+# Research Ideas
+
+## What is extent of observations within range of species?
+
+Data:
+
+- ranges: IUCN, AquaMaps
+
+- 
+
+## For coastal haabitats, what is extent and condition over time, globally?
+
+**Problem**: The status and trend of condition and extent for structure-forming habitats are very poorly understand over time on a global scale.
+
+  - coral reef
+  
+  - mangroves
+  
+  - seagrass
+  
+  - salt marsh
+
+**Solution**: Apply cloud computing (Google Earth Engine) and machine learning (convolutional neural networks) to massive online repositories of satellite data to predict annual summaries of habitat extent.
+
+- **Train** classification model: habitat ~ imagery
+
+    - habitat: UNEP-WCMC
+    
+    - imagery: Google Earth Engine
+
+- **Predict** annually and into the future
+
+
+## Thank You
+
+- More info: <http://benbestphd.com>
