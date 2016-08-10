@@ -121,8 +121,6 @@ TODO:
 
 </article></slide><slide class=''><hgroup><h2>Outline</h2></hgroup><article  id="outline">
 
-<p>Choose your own adventure&#8230;</p>
-
 <ul class = 'build'>
 <li><p>Background</p></li>
 <li><p>Research</p></li>
@@ -139,11 +137,11 @@ TODO:
 <li><p><strong>SDSS</strong>: spatial decision support systems to sync map, tradeoff plot and table for <em>siting</em> offshore wind and <em>routing</em> around whale strike risk <!-- TODO: embed iframes of apps --></p></li>
 </ul>
 
-</article></slide><slide class=''><hgroup><h2>Research</h2></hgroup><article  id="research" class="smaller">
+</article></slide><slide class=''><hgroup><h2>MBON Research Questions</h2></hgroup><article  id="mbon-research-questions" class="smaller">
 
 <p><!-- questions (can we do this?) --></p>
 
-<p>How can we translate these into operational MBON products?</p>
+<p>How can we operationalize MBON products?</p>
 
 <ul class = 'build'>
 <li><p><strong>What proportion of species range is covered by observations?</strong></p>
@@ -158,66 +156,104 @@ TODO:
 
 <p>EcoSim style food webs.</p>
 
-<p>Eddy et al. (2016) <a href='http://onlinelibrary.wiley.com/doi/10.1111/faf.12165/abstract' title=''>Ecosystem effects of invertebrate fisheries</a> <em>Fish &amp; Fisheries</em> (<a href='http://conservationmagazine.org/2016/07/ripple-effects-shellfish-fisheries/' title=''>press</a>)</p>
-
-<!-- see [The ripple effects of shellfish fisheries - Conservation](http://conservationmagazine.org/2016/07/ripple-effects-shellfish-fisheries/) --></li>
+<!-- 
+Eddy et al. (2016) [Ecosystem effects of invertebrate fisheries](http://onlinelibrary.wiley.com/doi/10.1111/faf.12165/abstract) _Fish & Fisheries_ ([press](http://conservationmagazine.org/2016/07/ripple-effects-shellfish-fisheries/)) 
+see [The ripple effects of shellfish fisheries - Conservation](http://conservationmagazine.org/2016/07/ripple-effects-shellfish-fisheries/) 
+--></li>
 </ul>
 
-</article></slide><slide class=''><hgroup><h2>Tools</h2></hgroup><article  id="tools">
+</article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Tools</h2></hgroup><article  id="tools">
+
+</article></slide><slide class=''><hgroup><h2>What is BON in a Box?</h2></hgroup><article  id="what-is-bon-in-a-box">
+
+<p><a href='http://geobon.org/bon-in-a-box/what-is-bon-in-a-box/' title=''>geobon.org/bon-in-a-box</a>: tools, protocols and software&#8230; interoperable&#8230; ability to detect change and the underlying mechanisms driving change in biodiversity.</p>
+
+<iframe src="https://www.youtube.com/embed/1asPEGia-xo" width="300" height="200" frameborder="0" allowfullscreen=""></iframe>
+
+</article></slide><slide class=''><hgroup><h2>Github</h2></hgroup><article  id="github">
+
+<p><a href='http://github.com/marinebon' title=''>github.com/<strong>marinebon</strong></a></p>
 
 <ul class = 'build'>
-<li><p>What is BON in a Box?</p></li>
-<li><p>[video, website]</p></li>
-<li><p>SOP (FC) vs tools vs portal kit vs communication system (forum, data sharing)</p></li>
-<li><p>Github project management across MBONs: <a href='http://github.com/marinebon' title=''>http://github.com/marinebon</a></p></li>
-<li><p>&quot;Geo-enrichment&quot; web services <!-- any spatial input, attributes output --></p>
+<li>repositories of code, data, documentation</li>
+<li>version control</li>
+<li>project management with <a href='https://github.com/marinebon/private' title=''>marinebon/private</a> repo -&gt; <a href='https://github.com/marinebon/private/issues' title=''>issues</a></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Data Enrichment Web Services</h2></hgroup><article  id="data-enrichment-web-services" class="smaller">
 
 <ul class = 'build'>
+<li><p>&quot;Geo-enrichment&quot; web services <!-- any spatial input, attributes output --></p></li>
 <li><p>complement to existing APIs (OBIS), THREDDS/ERDDAP servers</p></li>
 <li><p>client functions in packages (R, Python, Matlab, ArcGIS)</p></li>
 <li><p>connects from simple web portal</p></li>
-</ul></li>
-<li><p>Packages (bundles of functions)</p>
+<li><p>leverages existing ERDDAP, DataOne, etc APIs and servers</p></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Packages of Useful Functions (R, Python, Matlab, ArcGIS)</h2></hgroup><article  id="packages-of-useful-functions-r-python-matlab-arcgis">
 
 <ul class = 'build'>
-<li><p>software: R, Python, Matlab, ArcGIS</p></li>
-<li><p>plots (time-series), maps (with backgrounds, hexagons), venn diagrams, ordination (eDNA, seascapes) <!-- more detail here from Monterey notes --></p></li>
-<li><p>clients to access data repo APIs: robis, rerddap (see ROpenSci for more: dryad, figshare, DataOne)</p>
-
-<ul class = 'build'>
-<li>page of datasets by endpoint &amp; client (generated from directory of JSON files, or csv table to describe)</li>
-</ul></li>
-<li><p>vignettes with use case scenarios / examples</p></li>
+<li><p>functions:</p></li>
+<li><p>plot: time-series</p></li>
+<li><p>maps: with backgrounds, hexagons</p></li>
+<li><p>venn diagrams (eDNA)</p></li>
+<li><p>ordination (eDNA, seascapes)</p></li>
 <li><p>unit tests</p></li>
-</ul></li>
-<li><p>Manual</p>
+<li><p>documentation with vignettes</p></li>
+</ul>
 
-<ul class = 'build'>
-<li><p>SOP</p></li>
-<li><p>more like BON in box</p></li>
-<li><p>communally edited via Github (even w/ just browser)</p></li>
-</ul></li>
-<li><p>Portal Kit</p>
+<!--
+- Packages (bundles of functions)
+  
+    - software: R, Python, Matlab, ArcGIS
+    
+    - plots (time-series), maps (with backgrounds, hexagons), venn diagrams, ordination (eDNA, seascapes) <!-- more detail here from Monterey notes 
+    
+    - clients to access data repo APIs: robis, rerddap (see ROpenSci for more: dryad, figshare, DataOne)
+    
+        - page of datasets by endpoint & client (generated from directory of JSON files, or csv table to describe)
+    
+    - vignettes with use case scenarios / examples
+    
+    - unit tests
+-->
+
+<!--
+- Manual
+
+    - SOP
+    
+    - more like BON in box
+    
+    - communally edited via Github (even w/ just browser)
+-->
+
+</article></slide><slide class=''><hgroup><h2>Marinebon.org Website Revision on Github?</h2></hgroup><article  id="marinebon.org-website-revision-on-github">
+
+<p><a href='https://github.com/marinebon/marinebon.github.io' title=''>https://github.com/marinebon/marinebon.github.io</a></p>
 
 <ul class = 'build'>
 <li><p>data -&gt; summary, tables, plots, maps -&gt; interactive app</p></li>
 <li><p>continuous integration</p></li>
-</ul></li>
-<li><p>Dynamic Reports</p>
+<li><p>Dynamic documents using Rmarkdown</p>
 
 <ul class = 'build'>
-<li><p>dynamic documents using Rmarkdown</p></li>
-<li><p>quick: closes gap from data ingestion, analysis, visualization and sharing (no bottlenecks)</p></li>
+<li>quick: closes gap from data ingestion, analysis, visualization and sharing (no bottlenecks)</li>
 </ul></li>
-<li><p>Training Workshops</p>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Training Workshops</h2></hgroup><article  id="training-workshops">
 
 <ul class = 'build'>
-<li><p>When? 1) August in Monterey?, 2) all hands annual mtg Jan/Feb 2017</p></li>
+<li><p>When / Where?</p>
+
+<ul class = 'build'>
+<li>all hands annual mtg Jan/Feb 2017</li>
+</ul></li>
 <li><p>reproducible research: versioning code &amp; communicating via issues on Github</p></li>
 <li><p>dynamic reports (Rmarkdown)</p></li>
 <li><p>GUIs for desktop &amp; web (shiny)</p></li>
 <li><p>functions in packages</p></li>
-</ul></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>Dynamic Documents</h2></hgroup><article  id="dynamic-documents" class="smaller">
@@ -232,53 +268,46 @@ TODO:
 
 <aside class='note'><section><p>many formats: - <strong>pdf</strong>: pretty, professional, portable - <strong>docx</strong>: use track changes with collaborators - <strong>html</strong>: web</p></section></aside>
 
-</article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Background</h2></hgroup><article  id="background-1">
+<!--
+# Background
 
-</article></slide><slide class=''><hgroup><h2>OBIS-SEAMAP</h2></hgroup><article  id="obis-seamap">
+## OBIS-SEAMAP
 
-<ul class = 'build'>
-<li>portal img</li>
-</ul>
+- portal img
 
-</article></slide><slide class=''><hgroup><h2>MGET</h2></hgroup><article  id="mget">
+## MGET
 
-<ul class = 'build'>
-<li>[link to expandable tree]</li>
-</ul>
+- [link to expandable tree]
 
-</article></slide><slide class=''><hgroup><h2>SDM</h2></hgroup><article  id="sdm">
+## SDM
 
-<ul class = 'build'>
-<li>[link to MGEL press release]</li>
-</ul>
+- [link to MGEL press release]
 
-</article></slide><slide class=''><hgroup><h2>Needs</h2></hgroup><article  id="needs">
 
-<ul class = 'build'>
-<li>Compile disperate data sources
+## Needs
 
-<ul class = 'build'>
-<li>OBIS, AquaMaps, IUCN</li>
-</ul></li>
-</ul>
+- Compile disperate data sources
+    - OBIS, AquaMaps, IUCN
 
-</article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Background: OBIS-SEAMAP</h2></hgroup><article  id="background-obis-seamap">
+# Background: OBIS-SEAMAP
 
-<p>Ocean Biogeographic Information System - Spatial Ecological Analysis of Megavertebrate Animal Populations</p>
+Ocean Biogeographic Information System - Spatial Ecological Analysis of Megavertebrate Animal Populations
 
-</article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Background: MGET</h2></hgroup><article  id="background-mget">
+# Background: MGET
 
-<p>Marine Geospatial Ecology Tools</p>
+Marine Geospatial Ecology Tools
 
-</article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Background: OHI</h2></hgroup><article  id="background-ohi">
+# Background: OHI
 
-<p>Ocean Health Index</p>
+Ocean Health Index
 
-</article></slide><slide class=''><hgroup><h2>pie</h2></hgroup><article  id="pie">
+## pie
 
-</article></slide><slide class=''><hgroup><h2>cumulative human impacts (esri)</h2></hgroup><article  id="cumulative-human-impacts-esri">
+## cumulative human impacts (esri)
 
-</article></slide><slide class=''><hgroup><h2>Biodiversity in OHI</h2></hgroup><article  id="biodiversity-in-ohi">
+-->
+
+</article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Biodiversity in OHI</h2></hgroup><article  id="biodiversity-in-ohi">
 
 <p>Species index based on conservation, extinction risk</p>
 
@@ -323,8 +352,7 @@ x_{SPP} = \frac{\sum_{k=1}^{M} (\frac{\sum_{i=1}^{N} w_{i}}{N}) * A_{C}}{A_{T}}
 <p>Data:</p>
 
 <ul class = 'build'>
-<li><p>ranges: IUCN, AquaMaps</p></li>
-<li></li>
+<li>ranges: IUCN, AquaMaps</li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>For coastal haabitats, what is extent and condition over time, globally?</h2></hgroup><article  id="for-coastal-haabitats-what-is-extent-and-condition-over-time-globally">

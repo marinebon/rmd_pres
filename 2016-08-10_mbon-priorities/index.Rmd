@@ -13,6 +13,7 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 library(htmltools)
+library(vembedr) # https://github.com/ijlyttle/vembedr
 ```
 
 # Overview
@@ -26,8 +27,6 @@ TODO:
 -->
 
 ## Outline
-
-Choose your own adventure...
 
 - Background
 
@@ -47,11 +46,11 @@ Choose your own adventure...
 
 - **SDSS**: spatial decision support systems to sync map, tradeoff plot and table for _siting_ offshore wind and _routing_ around whale strike risk <!-- TODO: embed iframes of apps -->
 
-## Research {.smaller}
+## MBON Research Questions {.smaller}
 
  <!-- questions (can we do this?) -->
 
-How can we translate these into operational MBON products? 
+How can we operationalize MBON products? 
 
 - **What proportion of species range is covered by observations?**
 
@@ -67,34 +66,61 @@ How can we translate these into operational MBON products?
 
     EcoSim style food webs.
     
-    Eddy et al. (2016) [Ecosystem effects of invertebrate fisheries](http://onlinelibrary.wiley.com/doi/10.1111/faf.12165/abstract) _Fish & Fisheries_ ([press](http://conservationmagazine.org/2016/07/ripple-effects-shellfish-fisheries/))
+    <!-- 
+    Eddy et al. (2016) [Ecosystem effects of invertebrate fisheries](http://onlinelibrary.wiley.com/doi/10.1111/faf.12165/abstract) _Fish & Fisheries_ ([press](http://conservationmagazine.org/2016/07/ripple-effects-shellfish-fisheries/)) 
+    see [The ripple effects of shellfish fisheries - Conservation](http://conservationmagazine.org/2016/07/ripple-effects-shellfish-fisheries/) 
+    -->
 
+# Tools
 
-    <!-- see [The ripple effects of shellfish fisheries - Conservation](http://conservationmagazine.org/2016/07/ripple-effects-shellfish-fisheries/) -->
+## What is BON in a Box?
 
-## Tools
+[geobon.org/bon-in-a-box](http://geobon.org/bon-in-a-box/what-is-bon-in-a-box/): tools, protocols and software... interoperable... ability to detect change and the underlying mechanisms driving change in biodiversity.
 
-- What is BON in a Box?
+`r embed_youtube(id="1asPEGia-xo", width=300, height=200)`
 
-  - [video, website]
-  
-  - SOP (FC) vs tools vs portal kit vs communication system (forum, data sharing)
+## Github
 
-- Github project management across MBONs: <http://github.com/marinebon>
+[github.com/**marinebon**](http://github.com/marinebon)
+
+- repositories of code, data, documentation
+- version control
+- project management with [marinebon/private](https://github.com/marinebon/private) repo -> [issues](https://github.com/marinebon/private/issues)
+
+## Data Enrichment Web Services {.smaller}
 
 - "Geo-enrichment" web services <!-- any spatial input, attributes output -->
 
-    - complement to existing APIs (OBIS), THREDDS/ERDDAP servers
-    
-    - client functions in packages (R, Python, Matlab, ArcGIS)
-    
-    - connects from simple web portal
-    
+- complement to existing APIs (OBIS), THREDDS/ERDDAP servers
+
+- client functions in packages (R, Python, Matlab, ArcGIS)
+
+- connects from simple web portal
+
+- leverages existing ERDDAP, DataOne, etc APIs and servers
+
+## Packages of Useful Functions (R, Python, Matlab, ArcGIS)
+
+- functions:
+
+  - plot: time-series
+  
+  - maps: with backgrounds, hexagons
+  
+  - venn diagrams (eDNA)
+  
+  - ordination (eDNA, seascapes)
+
+- unit tests
+
+- documentation with vignettes
+
+<!--
 - Packages (bundles of functions)
   
     - software: R, Python, Matlab, ArcGIS
     
-    - plots (time-series), maps (with backgrounds, hexagons), venn diagrams, ordination (eDNA, seascapes) <!-- more detail here from Monterey notes -->
+    - plots (time-series), maps (with backgrounds, hexagons), venn diagrams, ordination (eDNA, seascapes) <!-- more detail here from Monterey notes 
     
     - clients to access data repo APIs: robis, rerddap (see ROpenSci for more: dryad, figshare, DataOne)
     
@@ -103,7 +129,8 @@ How can we translate these into operational MBON products?
     - vignettes with use case scenarios / examples
     
     - unit tests
-    
+-->
+<!--
 - Manual
 
     - SOP
@@ -111,30 +138,33 @@ How can we translate these into operational MBON products?
     - more like BON in box
     
     - communally edited via Github (even w/ just browser)
+-->
 
-- Portal Kit
+## Marinebon.org Website Revision on Github?
 
-    - data -> summary, tables, plots, maps -> interactive app
-    
-    - continuous integration
+<https://github.com/marinebon/marinebon.github.io>
 
-- Dynamic Reports
+- data -> summary, tables, plots, maps -> interactive app
+
+- continuous integration
+
+- Dynamic documents using Rmarkdown
   
-    - dynamic documents using Rmarkdown
-    
     - quick: closes gap from data ingestion, analysis, visualization and sharing (no bottlenecks)
 
-- Training Workshops
+## Training Workshops
 
-    - When? 1) August in Monterey?, 2) all hands annual mtg Jan/Feb 2017
+- When / Where?
 
-    - reproducible research: versioning code & communicating via issues on Github
-    
-    - dynamic reports (Rmarkdown)
-    
-    - GUIs for desktop & web (shiny)
-    
-    - functions in packages
+    - all hands annual mtg Jan/Feb 2017
+
+- reproducible research: versioning code & communicating via issues on Github
+
+- dynamic reports (Rmarkdown)
+
+- GUIs for desktop & web (shiny)
+
+- functions in packages
 
 ## Dynamic Documents {.smaller}
 
@@ -153,6 +183,7 @@ many formats:
 - **html**: web
 </div>
 
+<!--
 # Background
 
 ## OBIS-SEAMAP
@@ -188,8 +219,10 @@ Ocean Health Index
 ## pie
 
 ## cumulative human impacts (esri)
-    
-## Biodiversity in OHI
+
+-->
+
+# Biodiversity in OHI
 
 Species index based on conservation, extinction risk
 
@@ -227,6 +260,7 @@ assessed species list and maps: IUCN
 
 <!-- TODO: image of range map over grid extracted -->
 
+
 # Research Ideas
 
 ## What is extent of observations within range of species?
@@ -234,8 +268,6 @@ assessed species list and maps: IUCN
 Data:
 
 - ranges: IUCN, AquaMaps
-
-- 
 
 ## For coastal haabitats, what is extent and condition over time, globally?
 
