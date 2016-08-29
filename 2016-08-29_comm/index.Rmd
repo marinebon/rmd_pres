@@ -85,3 +85,18 @@ Jenn Brown's silhouette vision. dropdown for place, on hover of animal sillhouet
 - **Facebook** (internal + public): individual scientists doing work
     - linking above w/ people tagged
 
+# Websites
+
+## Content and Roles
+
+Separate roles per content:
+
+- Text: CJ, MBON scientists
+- Style: Aruga (+ Venezuala) HTML/CSS style experts
+- App: interactive applications, IOOS mapper, Shiny apps
+
+## Example **Style**: Eco Nature
+
+Visit [Eco Nature HTML Template](http://themes.cmsmasters.net/?theme=eco-nature-html). Note the many pleasing dynamic elements with hover and scrolling. Many more themes at [ThemeForest.net](http://ThemeForest.net)
+
+![Eco Nature theme](img/themegarden_econature.png)
