@@ -1,0 +1,110 @@
+---
+title: "notes"
+author: "Ben Best"
+date: "August 29, 2016"
+output: html_document
+---
+
+## Issues
+
+- Need clarity on what these products?
+     - .
+   - For Monday, BB TODO: 
+     - show MBON analysis [**obis_biodiv**](https://marinebon.github.io/analysis/obis_biodiv.html) in 3 modes
+     - silhouette image map
+   - Could learn a lot from existing NOAA climate folks and products
+
+- **CAVEATS** Think of trawl catch vs full stock assessment of a fishery!  Raw vs modeled data
+   - so maybe pull from white papers on stock assessments, with another time series of more up to date raw data
+   - eg for spatial catalogues of marine mammals: LMRIS stock assessments vs OBIS-SEAMAP raw survey observations
+   - need to manage expectations! would be good to survey fisheries scientists on utility of MBON, etc; so perhaps RS products correlated
+
+#### Technical Products
+
+- Technical help to be housed at [marinebon.github.io/**help**](https://marinebon.github.io/help/)
+- Example MBON [**obis_biodiv**](https://marinebon.github.io/analysis/obis_biodiv.html)
+  - arbitrary: 
+     - input biological data sources (OBIS, ERDDAP...). pick taxa (which relate to various issues)
+     - spatial units of interest (hexagons, grid cells, sanctuary polygons, country EEZs,...)
+     - diversity measures (Shannon's, ...). spatial extent, abundance, change over time.
+- Other examples
+   - OBIS: [Streamlining and enriching the analysis of OBIS data using R](http://iobis.org/2016/05/25/streamlining-analysis/)
+    ![obis analysis tools](http://iobis.org/images/analysis.png)
+    - aside: [iobis/obis-issues](https://github.com/iobis/obis-issues/issues?utf8=%E2%9C%93&q=is%3Aopen%20is%3Aissue) to organize tasks
+  - [species distribution modeling workflow with `zoon` package](http://rawgit.com/zoonproject/zoon/master/inst/doc/basic-zoon-usage.html)
+
+### Issues
+
+- species categorized by ecological relevance per generalized forms of specific ecological examples in [Potential Management Questions for the portal_Hepner.docx](https://github.com/marinebon/private/files/440032/Potential.Management.Questions.for.the.portal_Hepner.docx):
+   - commercial interest
+   - conservation status
+   - invasive species
+   - trophic impacts
+
+#### Client Products
+
+- Sanctuaries Condition Report
+
+- FL Apps
+  - eg dashboard
+
+### Social Media
+
+- Twitter (internal): technical / professional
+  - research publications
+  - technical
+- Instagram (public): multimedia 
+  - public: videos of transects, sediment sampling, satellite launches,...
+- Facebook (internal + public): individual scientists doing work
+  - linking above w/ people tagged
+
+### Meetings
+- collect wish list
+- standardize priorities
+- relates to sanctuary mtg Sep 12
+- survey monkey, reasons for website input around issues of interest
+  - gauge customer readiness and identify skills tier
+  - show working examples
+
+### Web Content Aspects
+
+Separate roles per aspect:
+
+1. **Content**: CJ, Ben... using Github
+1. **Style**: Aruga (+ Venezuala) HTML/CSS style experts
+   - look similar to NOAA / IOOS page for replication, or recommend new look more like NOAA Climate.gov / DigitalCoast / etc
+1. **App**: interactive applications, IOOS mapper, Shiny apps
+
+Different Websites:
+
+- **marinebon.org**
+  - purpose: general data awareness tool, so if you make own MBON here's how it works for you
+    - help us test this out
+    - here's the environmental data available (sst, salinity) and relate to biodiversity
+  - audience: gov't agencies & scientists, not so much public
+  - more how-to's on eDNA, machine learning of imagery, biodiv analysis, ...
+
+  - other example websites with this audience?
+    - [NOAA Climate.gov](https://www.climate.gov/): science & information for a climate-smart nation
+      - climate dashboard
+
+      ![image](https://cloud.githubusercontent.com/assets/2837257/18018448/ce1a6410-6b8b-11e6-9b96-ad578464103e.png)
+
+    - [NOAA Digital Coast](https://coast.noaa.gov/digitalcoast/). nice style
+      - data
+      - tools
+      - training
+
+      ![image](https://cloud.githubusercontent.com/assets/2837257/18018461/e72c31ea-6b8b-11e6-88aa-b0cbdaf1af9a.png)
+
+- **mbon.ioos.org** w/ Gabrielle
+  - purpose: here's how to explore final products
+  - TODO [BB]: video w/ narration at 2x
+  - familiarize users w/ portal, like w/ portal, help site, etc
+
+- NOAA Coastal Risk program - Digital Coast: series of mappers for sea level rise for practitioners teaching
+  - urban planners. partnered with American Planning Association (APA). user audience. 
+  - 2 phase approach
+    - 1) send info links/presentation
+    - 2) webinar to address specific community needs
+  - [EBM Tools Webinar](http://ebmtools.org)
