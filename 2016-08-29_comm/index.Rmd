@@ -91,9 +91,9 @@ Jenn Brown's silhouette vision. dropdown for place, on hover of animal sillhouet
 
 Separate roles per content:
 
-- Text: CJ, MBON scientists
-- Style: Aruga (+ Venezuala) HTML/CSS style experts
-- App: interactive applications, IOOS mapper, Shiny apps
+- **Text**: CJ, MBON scientists
+- **Style**: Aruga (+ Venezuala) HTML/CSS style experts
+- **App**: interactive applications, IOOS mapper, Shiny apps
 
 ## Example **Style**: Eco Nature
 
